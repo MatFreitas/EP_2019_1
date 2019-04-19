@@ -25,6 +25,6 @@ else:
         print()
         print("Que a aventura começe!")
     else:
-        print("{0} é teletransportado para a garagem de seu avô e ganha uma arma intergaláctica a ser usada no futuro.".format(usuario))
+        print("{0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro.".format(usuario))
         inventario["arma intergaláctica"]=50
         
