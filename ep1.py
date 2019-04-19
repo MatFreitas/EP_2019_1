@@ -3,6 +3,9 @@
 # Alunos: 
 #- Matheus Freitas Sant'Ana, matheusfs2@al.insper.edu.br
 #- Gabriel Salvator Benatar, gabriel.benatar@beityaacov.com.br
+
+usuario=input("Para começar a jogar digite seu nome: ")
+print('-'*37)
 print()
 print("Sala 405- Aula de Design de Software")
 print()
