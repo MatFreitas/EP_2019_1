@@ -3,9 +3,61 @@
 # Alunos: 
 #- Matheus Freitas Sant'Ana, matheusfs2@al.insper.edu.br
 #- Gabriel Salvator Benatar, gabriel.benatar@beityaacov.com.br
+import random
 inventario={}
-vida=200
 usuario=input("Para começar a jogar digite seu nome: ")
+def carregar_realidade1(escolha2):
+    vida_usuario=200
+    vida_selvagem=180
+    laser_blaster=50
+    conjunto_com_rick=70
+    espada_do_julgamento=60
+    soco_selvagem=50
+    chute_selvagem=40
+    combo_selvagem=100
+    print()
+    print("Oh não! Um selvagem super forte surgiu no seu caminho!")
+    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+    print("Vida de Selvagem: {0}".format(vida_selvagem))
+    while vida_selvagem>0 and vida_usuario>0:
+        a=random.randint(1,20)
+        print("Sua vez de atacar! Opções: laser blaster, ataque em conjunto com rick, espada do julgamento")
+        ataque=input("Ataque escolhido: ")
+        while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento":
+            ataque=input("Você escorregou no chão. Tente outro ataque: ")
+        if ataque=="laser blaster":
+            vida_selvagem-=laser_blaster
+            print()
+            print("Vida do selvagem: {0}".format(vida_selvagem))
+        elif ataque=="ataque em conjunto com rick":
+            vida_selvagem-=conjunto_com_rick
+            print()
+            print("Vida do selvagem: {0}".format(vida_selvagem))
+        else:
+            vida_selvagem-=espada_do_julgamento
+            print()
+            print("Vida do selvagem: {0}".format(vida_selvagem))
+        if 1<=a<=10:
+            vida_usuario-=chute_selvagem
+            print()
+            print("O oponente utilizou 'chute selvagem'!")
+            print("Vida de {0}: {1}".format(usuario,vida_usuario))
+        elif 11<=a<18:
+            vida_usuario-=soco_selvagem
+            print()
+            print("O oponente utilizou 'soco selvagem'!")
+            print("Vida de {0}: {1}".format(usuario,vida_usuario))
+        else:
+            vida_usuario-=combo_selvagem
+            print()
+            print("O oponente utilizou o seu ataque especial!")
+            print("Vida de {0}: {1}".format(usuario,vida_usuario))
+    if vida_usuario<=0:
+        return("Você morreu!")
+    else:
+        return("Selvagem derrotado!")
+        
+    
 def carregar_realidades(escolha2):
     print()
     info=''
@@ -15,7 +67,9 @@ def carregar_realidades(escolha2):
             for k in v.values():
                 info+=k
                 info+='. '
-    return (info)
+    print (info)
+    if escolha2=="realidade 1":
+        return carregar_realidade1(escolha2)      
 print()
 print()
 print("Sala 405- Aula de Design de Software")
@@ -48,8 +102,8 @@ else:
         inventario["arma intergaláctica"]=50
 print()
 escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
-if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3" and escolha2!="praia":
-    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3" and escolha2!="praia":
+if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 print(carregar_realidades(escolha2))
 
