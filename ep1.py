@@ -7,13 +7,14 @@ inventario={}
 vida=200
 usuario=input("Para começar a jogar digite seu nome: ")
 def carregar_realidades(escolha2):
+    print()
     info=''
-    realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para sr destrancado".format(usuario)},"realidade 3":{"titulo":"Caverna Obscura","descricao":"Rick e {0} viajam para uma caverna muito escura iluminada por um só feixe de luz que aponta para um altar sagrado. Curiosos, vocês vão ver o que tem nele".format(usuario)}}
+    realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para ser destrancado".format(usuario)},"realidade 3":{"titulo":"Caverna Obscura","descricao":"Rick e {0} viajam para uma caverna muito escura iluminada por um só feixe de luz que aponta para um altar sagrado. Curiosos, vocês vão ver o que tem nele".format(usuario)}}
     for e,v in realidades.items():
         if e==escolha2:
             for k in v.values():
-                info+='. '
                 info+=k
+                info+='. '
     return info
 print()
 print()
