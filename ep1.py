@@ -31,15 +31,12 @@ def carregar_realidade1(escolha2):
         else:
             if ataque=="laser blaster":
                 vida_selvagem-=laser_blaster
-                print()
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             elif ataque=="ataque em conjunto com rick":
                 vida_selvagem-=conjunto_com_rick
-                print()
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             else:
                 vida_selvagem-=espada_do_julgamento
-                print()
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             if 1<=a<=10 and vida_selvagem>0:
                 vida_usuario-=chute_selvagem
