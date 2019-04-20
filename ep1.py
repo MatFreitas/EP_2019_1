@@ -15,7 +15,7 @@ def carregar_realidades(escolha2):
             for k in v.values():
                 info+=k
                 info+='. '
-    return info
+    return (info)
 print()
 print()
 print("Sala 405- Aula de Design de Software")
@@ -48,8 +48,8 @@ else:
         inventario["arma intergaláctica"]=50
 print()
 escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
-if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3" and escolha2!="praia":
+    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3" and escolha2!="praia":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 print(carregar_realidades(escolha2))
 
