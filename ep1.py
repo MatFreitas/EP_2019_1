@@ -37,17 +37,17 @@ def carregar_realidade1(escolha2):
             vida_selvagem-=espada_do_julgamento
             print()
             print("Vida do selvagem: {0}".format(vida_selvagem))
-        if 1<=a<=10:
+        if 1<=a<=10 and vida_selvagem>0:
             vida_usuario-=chute_selvagem
             print()
             print("O oponente utilizou 'chute selvagem'!")
             print("Vida de {0}: {1}".format(usuario,vida_usuario))
-        elif 11<=a<18:
+        elif 11<=a<18 and vida_selvagem>0:
             vida_usuario-=soco_selvagem
             print()
             print("O oponente utilizou 'soco selvagem'!")
             print("Vida de {0}: {1}".format(usuario,vida_usuario))
-        else:
+        elif 18<=a<=20 and vida_selvagem>0:
             vida_usuario-=combo_selvagem
             print()
             print("O oponente utilizou o seu ataque especial!")
@@ -57,7 +57,6 @@ def carregar_realidade1(escolha2):
     else:
         return("Selvagem derrotado!")
         
-    
 def carregar_realidades(escolha2):
     print()
     info=''
