@@ -9,49 +9,53 @@ usuario=input("Para começar a jogar digite seu nome: ")
 def carregar_realidade1(escolha2):
     vida_usuario=200
     vida_selvagem=180
-    laser_blaster=50
+    laser_blaster=20
     conjunto_com_rick=70
     espada_do_julgamento=60
     soco_selvagem=50
     chute_selvagem=40
     combo_selvagem=100
     print()
-    print("Oh não! Um selvagem super forte surgiu no seu caminho!")
+    print("Oh não! Um selvagem super forte surgiu no seu caminho! (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!")
     print("Vida de {0}: {1}".format(usuario,vida_usuario))
     print("Vida de Selvagem: {0}".format(vida_selvagem))
     while vida_selvagem>0 and vida_usuario>0:
         a=random.randint(1,20)
         print("Sua vez de atacar! Opções: laser blaster, ataque em conjunto com rick, espada do julgamento")
         ataque=input("Ataque escolhido: ")
-        while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento":
+        while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento" and ataque!="arma intergaláctica":
             ataque=input("Você escorregou no chão. Tente outro ataque: ")
-        if ataque=="laser blaster":
-            vida_selvagem-=laser_blaster
-            print()
-            print("Vida do selvagem: {0}".format(vida_selvagem))
-        elif ataque=="ataque em conjunto com rick":
-            vida_selvagem-=conjunto_com_rick
-            print()
-            print("Vida do selvagem: {0}".format(vida_selvagem))
+        if ataque=="arma intergaláctica":
+            print("A-ha! Você lembrou-se da sua arma guardada em seu inventário!")
+            vida_selvagem-=inventario["arma intergaláctica"]
         else:
-            vida_selvagem-=espada_do_julgamento
-            print()
-            print("Vida do selvagem: {0}".format(vida_selvagem))
-        if 1<=a<=10 and vida_selvagem>0:
-            vida_usuario-=chute_selvagem
-            print()
-            print("O oponente utilizou 'chute selvagem'!")
-            print("Vida de {0}: {1}".format(usuario,vida_usuario))
-        elif 11<=a<18 and vida_selvagem>0:
-            vida_usuario-=soco_selvagem
-            print()
-            print("O oponente utilizou 'soco selvagem'!")
-            print("Vida de {0}: {1}".format(usuario,vida_usuario))
-        elif 18<=a<=20 and vida_selvagem>0:
-            vida_usuario-=combo_selvagem
-            print()
-            print("O oponente utilizou o seu ataque especial!")
-            print("Vida de {0}: {1}".format(usuario,vida_usuario))
+            if ataque=="laser blaster":
+                vida_selvagem-=laser_blaster
+                print()
+                print("Vida do selvagem: {0}".format(vida_selvagem))
+            elif ataque=="ataque em conjunto com rick":
+                vida_selvagem-=conjunto_com_rick
+                print()
+                print("Vida do selvagem: {0}".format(vida_selvagem))
+            else:
+                vida_selvagem-=espada_do_julgamento
+                print()
+                print("Vida do selvagem: {0}".format(vida_selvagem))
+            if 1<=a<=10 and vida_selvagem>0:
+                vida_usuario-=chute_selvagem
+                print()
+                print("O oponente utilizou 'chute selvagem'!")
+                print("Vida de {0}: {1}".format(usuario,vida_usuario))
+            elif 11<=a<18 and vida_selvagem>0:
+                vida_usuario-=soco_selvagem
+                print()
+                print("O oponente utilizou 'soco selvagem'!")
+                print("Vida de {0}: {1}".format(usuario,vida_usuario))
+            elif 18<=a<=20 and vida_selvagem>0:
+                vida_usuario-=combo_selvagem
+                print()
+                print("O oponente utilizou o seu ataque especial!")
+                print("Vida de {0}: {1}".format(usuario,vida_usuario))
     if vida_usuario<=0:
         return("Você morreu!")
     else:
@@ -98,7 +102,7 @@ else:
     else:
         print()
         print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
-        inventario["arma intergaláctica"]=50
+        inventario["arma intergaláctica"]=1000
 print()
 escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
 if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
