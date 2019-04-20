@@ -6,7 +6,7 @@
 inventario={}
 vida=200
 usuario=input("Para começar a jogar digite seu nome: ")
-def carregar_relidades(escolha2):
+def carregar_realidades(escolha2):
     info=''
     realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para sr destrancado".format(usuario)},"realidade 3":{"titulo":"Caverna Obscura","descricao":"Rick e {0} viajam para uma caverna muito escura iluminada por um só feixe de luz que aponta para um altar sagrado. Curiosos, vocês vão ver o que tem nele".format(usuario)}}
     for e,v in realidades.items():
@@ -45,6 +45,12 @@ else:
         print()
         print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
         inventario["arma intergaláctica"]=50
+print()
+escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
+if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+        escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
+print(carregar_realidades(escolha2))
 
 
         
