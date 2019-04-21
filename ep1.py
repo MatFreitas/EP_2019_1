@@ -59,6 +59,7 @@ def carregar_realidade1(escolha2):
             print("Você morreu!")
             print(carregar_realidades(escolha2))
     else:
+        resultado=="sucesso"
         inventario["troféu da realidade 1"]="Pedra de Urânio"
         return("Selvagem derrotado! Agora, como recompensa, uma pedra de urânio que irá servir como fonte da arma foi adicionada ao seu inventário.")
         
@@ -109,7 +110,9 @@ escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de
 if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-print(carregar_realidades(escolha2))
+if escolha2=="realidade 1":
+    print(carregar_realidades(escolha2))
+
 
 
 
