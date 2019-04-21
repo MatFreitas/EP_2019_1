@@ -6,8 +6,18 @@
 import random
 inventario={}
 usuario=input("Para começar a jogar digite seu nome: ")
+def carregar_realidade2(escolha2):
+    print()
+    resolucao=input("Charada: a todas sas coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
+    tentativas=10
+    while resolucao!="ponte" and tentativas>0 and resolucao!="reflexo":
+        resolucao=input("Errado! Restam {0} tentativas! ".format(tentativas))
+        tentativas-=1
+    if tentativas>0:
+        return ("sucesso")
+    else:
+        return ("fracasso")
 def carregar_realidade1(escolha2):
-    resultado="game over"
     vida_usuario=220
     vida_selvagem=180
     laser_blaster=20
@@ -55,11 +65,8 @@ def carregar_realidade1(escolha2):
                 print("O oponente utilizou o seu ataque especial!")
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
     if vida_usuario<=0:
-        while resultado=="game over":
-            print("Você morreu!")
-            print(carregar_realidades(escolha2))
+        return("Você morreu!")
     else:
-        resultado=="sucesso"
         inventario["troféu da realidade 1"]="Pedra de Urânio"
         return("Selvagem derrotado! Agora, como recompensa, uma pedra de urânio que irá servir como fonte da arma foi adicionada ao seu inventário.")
         
@@ -112,6 +119,7 @@ if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 if escolha2=="realidade 1":
     print(carregar_realidades(escolha2))
+
 
 
 
