@@ -19,7 +19,7 @@ def carregar_realidade2(escolha2):
         return ("Você decifrou a charada! Agora, o 'The Bowl', item que atua como transmissor de energia da arma, foi adicionado ao seu inventário.")
     else:
         print()
-        return ("Fracassou! Rick e {0} caem em um calabouço onde estão destinados a permanecer no calabouço do rei até o fim de suas vidas!".format(usuario))
+        return ("Fracassou! Rick e {0} caem em no calabouço do rei onde estão destinados a permanecer até o fim de suas vidas!".format(usuario))
 def carregar_realidade1(escolha2):
     vida_usuario=220
     vida_selvagem=180
@@ -123,7 +123,11 @@ if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 print(carregar_realidades(escolha2))
-    
+escolha2=input("De volta a garagem, Rick te diz que ainda há muito trabalho a ser feito e pede para você digitar a realidade a que deseja ir: ")
+if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+        escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
+print(carregar_realidades(escolha2))
 
 
 
