@@ -7,16 +7,17 @@ import random
 inventario={}
 usuario=input("Para começar a jogar digite seu nome: ")
 def carregar_realidade1(escolha2):
-    vida_usuario=200
+    resultado="game over"
+    vida_usuario=220
     vida_selvagem=180
     laser_blaster=20
-    conjunto_com_rick=70
-    espada_do_julgamento=60
-    soco_selvagem=50
-    chute_selvagem=40
+    conjunto_com_rick=80
+    espada_do_julgamento=50
+    soco_selvagem=60
+    chute_selvagem=50
     combo_selvagem=100
     print()
-    print("Oh não! Um selvagem super forte surgiu no seu caminho! (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!")
+    print("Oh não! Um selvagem super forte surgiu no seu caminho! (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
     print("Vida de {0}: {1}".format(usuario,vida_usuario))
     print("Vida de Selvagem: {0}".format(vida_selvagem))
     while vida_selvagem>0 and vida_usuario>0:
@@ -54,9 +55,12 @@ def carregar_realidade1(escolha2):
                 print("O oponente utilizou o seu ataque especial!")
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
     if vida_usuario<=0:
-        return("Você morreu!")
+        while resultado=="game over":
+            print("Você morreu!")
+            print(carregar_realidades(escolha2))
     else:
-        return("Selvagem derrotado!")
+        inventario["troféu da realidade 1"]="Pedra de Urânio"
+        return("Selvagem derrotado! Agora, como recompensa, uma pedra de urânio que irá servir como fonte da arma foi adicionada ao seu inventário.")
         
 def carregar_realidades(escolha2):
     print()
@@ -106,6 +110,7 @@ if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 print(carregar_realidades(escolha2))
+
 
 
         
