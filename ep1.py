@@ -14,9 +14,12 @@ def carregar_realidade2(escolha2):
         resolucao=input("Errado! Restam {0} tentativas! ".format(tentativas))
         tentativas-=1
     if tentativas>0:
-        return ("sucesso")
+        print()
+        inventario["troféu da realidade 2"]="The Bowl"
+        return ("Você decifrou a charada! Agora, o 'The Bowl', item que atua como transmissor de energia da arma, foi adicionado ao seu inventário.")
     else:
-        return ("fracasso")
+        print()
+        return ("Fracassou! Rick e {0} caem em um calabouço onde estão destinados a permanecer no calabouço do rei até o fim de suas vidas!".format(usuario))
 def carregar_realidade1(escolha2):
     vida_usuario=220
     vida_selvagem=180
@@ -81,7 +84,9 @@ def carregar_realidades(escolha2):
                 info+='. '
     print (info)
     if escolha2=="realidade 1":
-        return carregar_realidade1(escolha2)      
+        return carregar_realidade1(escolha2)
+    else:
+        return carregar_realidade2(escolha2)
 print()
 print()
 print("Sala 405- Aula de Design de Software")
@@ -117,8 +122,8 @@ escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de
 if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-if escolha2=="realidade 1":
-    print(carregar_realidades(escolha2))
+print(carregar_realidades(escolha2))
+    
 
 
 
