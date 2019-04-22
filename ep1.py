@@ -19,7 +19,7 @@ def carregar_realidade2(escolha2):
         return ("Você decifrou a charada! Agora, o 'The Bowl', item que atua como transmissor de energia da arma, foi adicionado ao seu inventário.")
     else:
         print()
-        return ("Fracassou! Rick e {0} caem em no calabouço do rei onde estão destinados a permanecer até o fim de suas vidas!".format(usuario))
+        return ("Fracassou! Você e Rick caem em no calabouço do rei onde estão destinados a permanecer até o fim de suas vidas!")
 def carregar_realidade1(escolha2):
     vida_usuario=220
     vida_selvagem=180
