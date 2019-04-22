@@ -77,7 +77,7 @@ def carregar_realidade3(escolha2):
 def carregar_realidade2(escolha2):
     print()
     time.sleep(0.2)
-    resolucao=input("Charada: a todas sas coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
+    resolucao=input("Charada: a todas as coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
     tentativas=10
     while tentativas>0 and resolucao!="reflexo":
         time.sleep(0.2)
