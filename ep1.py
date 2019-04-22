@@ -57,8 +57,8 @@ def carregar_realidade3(escolha2):
     if vida_usuario<=0:
         return("Você morreu!")
     else:
-        #inventario["troféu da realidade 1"]="Pedra de Urânio"
-        #return("Selvagem derrotado! Agora, como recompensa, uma pedra de urânio que irá servir como fonte da arma foi adicionada ao seu inventário.")
+        inventario["troféu da realidade 3"]="Frasco de Magnésio"
+        return("Agente derrotado! Agora, como recompensa, um frasco de magnésio que irá ajudar na constituição da arma foi adicionada ao seu inventário.")
 
 def carregar_realidade2(escolha2):
     print()
@@ -140,8 +140,11 @@ def carregar_realidades(escolha2):
     print (info)
     if escolha2=="realidade 1":
         return carregar_realidade1(escolha2)
-    else:
+    elif escolha2=="realidade 2":
         return carregar_realidade2(escolha2)
+    else:
+        return carregar_realidade3(escolha2)
+    
 print()
 print()
 print("Sala 405- Aula de Design de Software")
@@ -183,6 +186,12 @@ if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 print(carregar_realidades(escolha2))
+escolha2=input("De volta a garagem, Rick te diz que a aventura está quase acabando e pede para você digitar a realidade a que deseja ir: ")
+if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+        escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
+print(carregar_realidades(escolha2))
+
 
 
 
