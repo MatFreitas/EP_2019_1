@@ -171,15 +171,15 @@ def carregar_realidades(escolha2):
     
 print()
 print()
-time.sleep(0.2)
+time.sleep(0.4)
 print("Sala 405- Aula de Design de Software")
-time.sleep(0.2)
+time.sleep(0.4)
 print('-'*37)
-time.sleep(0.2)
+time.sleep(0.4)
 print('É Quarta-Feira à tarde, você está no Insper na Aula de Design de Software e decide ir ao banheiro, pois precisa de um lugar sossegado para pensar em uma maneira de como adiar o EP, já que você nem começou a fazer. De repente seu avô Rick que estava desaparecido há anos surge e te convida para uma aventura diferenciada, sobre realidades alternativas, mudar o futuro, etc. Você não entende muito bem o que ele quer dizer, mas vê isso como uma possibilidade de adiar o EP.')
 print()
-time.sleep(0.2)
-print("Rick: Rápido! Preciso de sua ajuda, a Teriathlon Plasmium 26 quebrou! Se você me ajudar, te retribuo com um favor!")
+time.sleep(0.4)
+print("Rick: Rápido! Preciso de sua ajuda, minha arma de teletransporte, a Teriathlon Plasmium 26 quebrou! Se você me ajudar, te retribuo com um favor!")
 escolha1=input("aceitar ou recusar? ")
 if escolha1!="aceitar" and escolha1!="recusar":
     while escolha1!="aceitar" and escolha1!="recusar":
