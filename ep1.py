@@ -7,6 +7,7 @@ import random
 import time
 inventario={}
 usuario=input("Para começar a jogar digite seu nome: ")
+game_over=False
 
 def carregar_realidade3(escolha2):
     vida_usuario=220
@@ -173,60 +174,61 @@ def carregar_realidades(escolha2):
     else:
         return carregar_realidade3(escolha2)
     
-print()
-print()
-time.sleep(0.4)
-print("Sala 405- Aula de Design de Software")
-time.sleep(0.4)
-print('-'*37)
-time.sleep(0.4)
-print('É Quarta-Feira à tarde, você está no Insper na Aula de Design de Software e decide ir ao banheiro, pois precisa de um lugar sossegado para pensar em uma maneira de como adiar o EP, já que você nem começou a fazer. De repente seu avô Rick que estava desaparecido há anos surge e te convida para uma aventura diferenciada, sobre realidades alternativas, mudar o futuro, etc. Você não entende muito bem o que ele quer dizer, mas vê isso como uma possibilidade de adiar o EP.')
-print()
-time.sleep(0.4)
-print("Rick: Rápido! Preciso de sua ajuda, minha arma de teletransporte, a Teriathlon Plasmium 26 quebrou! Se você me ajudar, te retribuo com um favor!")
-escolha1=input("aceitar ou recusar? ")
-if escolha1!="aceitar" and escolha1!="recusar":
-    while escolha1!="aceitar" and escolha1!="recusar":
-        print()
-        escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida): ")       
-if escolha1=="aceitar":
+while not game_over:    
     print()
-    time.sleep(0.2)
-    print("Rick: Obrigado por aceitar! Agora vou te explicar o que precisa ser feito para consertar minha arma. Para isso será necessário visitar 3 realidades diferentes, em cada uma você encontrará um componete para a contrução da arma. Os componentes necessários para a contrução são: uma pedra de urânio, um frasco de magnésio e o 'Bowl'") 
-else:
     print()
-    time.sleep(0.2)
-    print("Rick insiste que você deve ajudá-lo  dizendo que se for com ele, além de te ajudar com a data, também te ajudará a tirar um 10 no EP.")
+    time.sleep(0.4)
+    print("Sala 405- Aula de Design de Software")
+    time.sleep(0.4)
+    print('-'*37)
+    time.sleep(0.4)
+    print('É Quarta-Feira à tarde, você está no Insper na Aula de Design de Software e decide ir ao banheiro, pois precisa de um lugar sossegado para pensar em uma maneira de como adiar o EP, já que você nem começou a fazer. De repente seu avô Rick que estava desaparecido há anos surge e te convida para uma aventura diferenciada, sobre realidades alternativas, mudar o futuro, etc. Você não entende muito bem o que ele quer dizer, mas vê isso como uma possibilidade de adiar o EP.')
+    print()
+    time.sleep(0.4)
+    print("Rick: Rápido! Preciso de sua ajuda, minha arma de teletransporte, a Teriathlon Plasmium 26 quebrou! Se você me ajudar, te retribuo com um favor!")
     escolha1=input("aceitar ou recusar? ")
     if escolha1!="aceitar" and escolha1!="recusar":
         while escolha1!="aceitar" and escolha1!="recusar":
             print()
-            escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida: )") 
+            escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida): ")       
     if escolha1=="aceitar":
         print()
         time.sleep(0.2)
-        print("Que a aventura começe! Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.")
+        print("Rick: Obrigado por aceitar! Agora vou te explicar o que precisa ser feito para consertar minha arma. Para isso será necessário visitar 3 realidades diferentes, em cada uma você encontrará um componete para a contrução da arma. Os componentes necessários para a contrução são: uma pedra de urânio, um frasco de magnésio e o 'Bowl'") 
     else:
         print()
         time.sleep(0.2)
-        print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
-        inventario["arma intergaláctica"]=1000
-print()
-escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
-if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-        escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-print(carregar_realidades(escolha2))
-escolha2=input("De volta a garagem, Rick te diz que ainda há muito trabalho a ser feito e pede para você digitar a realidade a que deseja ir: ")
-if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-        escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-print(carregar_realidades(escolha2))
-escolha2=input("De volta a garagem, Rick te diz que a aventura está quase acabando e pede para você digitar a realidade a que deseja ir: ")
-if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-    while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-        escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-print(carregar_realidades(escolha2))
+        print("Rick insiste que você deve ajudá-lo  dizendo que se for com ele, além de te ajudar com a data, também te ajudará a tirar um 10 no EP.")
+        escolha1=input("aceitar ou recusar? ")
+        if escolha1!="aceitar" and escolha1!="recusar":
+            while escolha1!="aceitar" and escolha1!="recusar":
+                print()
+                escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida: )") 
+        if escolha1=="aceitar":
+            print()
+            time.sleep(0.2)
+            print("Que a aventura começe! Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.")
+        else:
+            print()
+            time.sleep(0.2)
+            print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
+            inventario["arma intergaláctica"]=1000
+    print()
+    escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
+    if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+        while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+            escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
+    print(carregar_realidades(escolha2))
+    escolha2=input("De volta a garagem, Rick te diz que ainda há muito trabalho a ser feito e pede para você digitar a realidade a que deseja ir: ")
+    if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+        while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+            escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
+    print(carregar_realidades(escolha2))
+    escolha2=input("De volta a garagem, Rick te diz que a aventura está quase acabando e pede para você digitar a realidade a que deseja ir: ")
+    if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+        while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
+            escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
+    print(carregar_realidades(escolha2))
 
 
 
