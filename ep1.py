@@ -38,7 +38,7 @@ def carregar_realidade1(escolha2):
         print("Sua vez de atacar! Opções: laser blaster, ataque em conjunto com rick, espada do julgamento")
         ataque=input("Ataque escolhido: ")
         while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento" and ataque!="arma intergaláctica":
-            ataque=input("Você escorregou no chão. Tente outro ataque: ")
+            ataque=input("Ihhhh, não foi dessa vez. Tente outro ataque: ")
         if ataque=="arma intergaláctica":
             print("A-ha! Você lembrou-se da sua arma guardada em seu inventário!")
             vida_selvagem-=inventario["arma intergaláctica"]
