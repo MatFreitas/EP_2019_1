@@ -74,13 +74,16 @@ def carregar_realidade3(escolha2):
 
 def carregar_realidade2(escolha2):
     print()
+    time.sleep(0.2)
     resolucao=input("Charada: a todas sas coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
     tentativas=10
     while tentativas>0 and resolucao!="reflexo":
+        time.sleep(0.2)
         resolucao=input("Errado! Restam {0} tentativas! ".format(tentativas))
         tentativas-=1
     if tentativas>0:
         print()
+        time.sleep(0.2)
         inventario["troféu da realidade 2"]="The Bowl"
         return ("Você decifrou a charada! Agora, o 'The Bowl', item que atua como transmissor de energia da arma, foi adicionado ao seu inventário.")
     else:
@@ -116,14 +119,15 @@ def carregar_realidade1(escolha2):
         else:
             if ataque=="laser blaster":
                 vida_selvagem-=laser_blaster
-                time.sleep(0.2)
+                time.sleep(0.9)
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             elif ataque=="ataque em conjunto com rick":
                 vida_selvagem-=conjunto_com_rick
-                time.sleep(0.2)
+                time.sleep(0.9)
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             else:
                 vida_selvagem-=espada_do_julgamento
+                time.sleep(0.9)
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             if 1<=a<=10 and vida_selvagem>0:
                 vida_usuario-=chute_selvagem
