@@ -10,7 +10,7 @@ def carregar_realidade2(escolha2):
     print()
     resolucao=input("Charada: a todas sas coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
     tentativas=10
-    while resolucao!="ponte" and tentativas>0 and resolucao!="reflexo":
+    while tentativas>0 and resolucao!="reflexo":
         resolucao=input("Errado! Restam {0} tentativas! ".format(tentativas))
         tentativas-=1
     if tentativas>0:
