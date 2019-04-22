@@ -9,172 +9,176 @@ inventario={}
 usuario=input("Para começar a jogar digite seu nome: ")
 game_over=False
 
-def carregar_realidade3(escolha2):
-    vida_usuario=220
-    vida_agente=180
-    tapa_intergaláctico=20
-    combo_de_socos=80
-    banho_de_ácido=50
-    soco_agente=60
-    chute_agente=50
-    peteleco_agente=100
-    
-    
-    print()
-    time.sleep(0.2)
-    print("Rick: Socorro! Agente Thompson nos encontrou! Ele é do governo, e está atrás de nós, pois o que estamos fazendo é ilegal! Ganhe dele na luta para que possamos continuar. (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
-    time.sleep(0.2)
-    print("Vida de {0}: {1}".format(usuario,vida_usuario))
-    time.sleep(0.2)
-    print("Vida do Agente: {0}".format(vida_agente))
-    while vida_agente>0 and vida_usuario>0:
-        a=random.randint(1,20)
-        print("Sua vez de atacar! Opções: tapa intergaláctico, combo de socos, banho de ácido.")
-        ataque=input("Ataque escolhido: ")
-        while ataque!="tapa intergaláctico" and ataque!="combo de socos" and ataque!="banho de ácido" and ataque!="arma intergaláctica":
-            ataque=input("Ihhhh, não foi dessa vez. Tente outro ataque: ")
-        if ataque=="arma intergaláctica":
-            print("A-ha! Você lembrou-se da sua arma guardada em seu inventário!")
-            vida_agente-=inventario["arma intergaláctica"]
-        else:
-            if ataque=="tapa intergaláctico":
-                vida_agente-=tapa_intergaláctico
-                print("Vida do agente: {0}".format(vida_agente))
-            elif ataque=="combo_de_socos":
-                vida_agente-=combo_de_socos
-                print("Vida do agente: {0}".format(vida_agente))
-            else:
-                vida_agente-=banho_de_ácido
-                print("Vida do agente: {0}".format(vida_agente))
-            if 1<=a<=10 and vida_agente>0:
-                vida_usuario-=soco_agente
-                print()
-                time.sleep(0.2)
-                print("O oponente utilizou 'Soco agente'!")
-                time.sleep(0.2)
-                print("Vida de {0}: {1}".format(usuario,vida_usuario))
-            elif 11<=a<18 and vida_agente>0:
-                vida_usuario-=chute_agente
-                print()
-                time.sleep(0.2)
-                print("O oponente utilizou 'Chute agente'!")
-                time.sleep(0.2)
-                print("Vida de {0}: {1}".format(usuario,vida_usuario))
-            elif 18<=a<=20 and vida_agente>0:
-                vida_usuario-=peteleco_agente
-                print()
-                time.sleep(0.2)
-                print("O oponente utilizou o seu ataque especial! O peteleco agente!!")
-                time.sleep(0.2)
-                print("Vida de {0}: {1}".format(usuario,vida_usuario))
-    if vida_usuario<=0:
-        return("Você morreu!")
-    else:
-        inventario["troféu da realidade 3"]="Frasco de Magnésio"
-        return("Agente derrotado! Agora, como recompensa, um frasco de magnésio que irá ajudar na constituição da arma foi adicionada ao seu inventário.")
-
-def carregar_realidade2(escolha2):
-    print()
-    time.sleep(0.2)
-    resolucao=input("Charada: a todas sas coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
-    tentativas=10
-    while tentativas>0 and resolucao!="reflexo":
-        time.sleep(0.2)
-        resolucao=input("Errado! Restam {0} tentativas! ".format(tentativas))
-        tentativas-=1
-    if tentativas>0:
-        print()
-        time.sleep(0.2)
-        inventario["troféu da realidade 2"]="The Bowl"
-        return ("Você decifrou a charada! Agora, o 'The Bowl', item que atua como transmissor de energia da arma, foi adicionado ao seu inventário.")
-    else:
-        print()
-        return ("Fracassou! Você e Rick caem em no calabouço do rei onde estão destinados a permanecer até o fim de suas vidas!")
-
-def carregar_realidade1(escolha2):
-    vida_usuario=220
-    vida_selvagem=180
-    laser_blaster=20
-    conjunto_com_rick=80
-    espada_do_julgamento=50
-    soco_selvagem=60
-    chute_selvagem=50
-    combo_selvagem=100
-    print()
-    time.sleep(0.2)
-    print("Oh não! Um selvagem super forte surgiu no seu caminho! (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
-    time.sleep(0.2)
-    print("Vida de {0}: {1}".format(usuario,vida_usuario))
-    time.sleep(0.2)
-    print("Vida de Selvagem: {0}".format(vida_selvagem))
-    while vida_selvagem>0 and vida_usuario>0:
-        a=random.randint(1,20)
-        time.sleep(0.2)
-        print("Sua vez de atacar! Opções: laser blaster, ataque em conjunto com rick, espada do julgamento")
-        ataque=input("Ataque escolhido: ")
-        while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento" and ataque!="arma intergaláctica":
-            ataque=input("Ihhhh, não foi dessa vez. Tente outro ataque: ")
-        if ataque=="arma intergaláctica":
-            print("A-ha! Você lembrou-se da sua arma guardada em seu inventário!")
-            vida_selvagem-=inventario["arma intergaláctica"]
-        else:
-            if ataque=="laser blaster":
-                vida_selvagem-=laser_blaster
-                time.sleep(0.9)
-                print("Vida do selvagem: {0}".format(vida_selvagem))
-            elif ataque=="ataque em conjunto com rick":
-                vida_selvagem-=conjunto_com_rick
-                time.sleep(0.9)
-                print("Vida do selvagem: {0}".format(vida_selvagem))
-            else:
-                vida_selvagem-=espada_do_julgamento
-                time.sleep(0.9)
-                print("Vida do selvagem: {0}".format(vida_selvagem))
-            if 1<=a<=10 and vida_selvagem>0:
-                vida_usuario-=chute_selvagem
-                print()
-                time.sleep(0.2)
-                print("O oponente utilizou 'chute selvagem'!")
-                time.sleep(0.2)
-                print("Vida de {0}: {1}".format(usuario,vida_usuario))
-            elif 11<=a<18 and vida_selvagem>0:
-                vida_usuario-=soco_selvagem
-                print()
-                time.sleep(0.2)
-                print("O oponente utilizou 'soco selvagem'!")
-                time.sleep(0.2)
-                print("Vida de {0}: {1}".format(usuario,vida_usuario))
-            elif 18<=a<=20 and vida_selvagem>0:
-                vida_usuario-=combo_selvagem
-                print()
-                time.sleep(0.2)
-                print("O oponente utilizou o seu ataque especial!")
-                time.sleep(0.2)
-                print("Vida de {0}: {1}".format(usuario,vida_usuario))
-    if vida_usuario<=0:
-        return("Você morreu!")
-    else:
-        inventario["troféu da realidade 1"]="Pedra de Urânio"
-        return("Selvagem derrotado! Agora, como recompensa, uma pedra de urânio que irá servir como fonte da arma foi adicionada ao seu inventário.")
-        
-def carregar_realidades(escolha2):
-    print()
-    info=''
-    realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para ser destrancado".format(usuario)},"realidade 3":{"titulo":"Caverna Obscura","descricao":"Rick e {0} viajam para uma caverna muito escura iluminada por um só feixe de luz que aponta para um altar sagrado. Curiosos, vocês vão ver o que tem nele".format(usuario)}}
-    for e,v in realidades.items():
-        if e==escolha2:
-            for k in v.values():
-                info+=k
-                info+='. '
-    print (info)
-    if escolha2=="realidade 1":
-        return carregar_realidade1(escolha2)
-    elif escolha2=="realidade 2":
-        return carregar_realidade2(escolha2)
-    else:
-        return carregar_realidade3(escolha2)
-    
 while not game_over:    
+    def carregar_realidade3(escolha2):
+        vida_usuario=220
+        vida_agente=180
+        tapa_intergaláctico=20
+        combo_de_socos=80
+        banho_de_ácido=50
+        soco_agente=60
+        chute_agente=50
+        peteleco_agente=100
+        
+        
+        print()
+        time.sleep(0.2)
+        print("Rick: Socorro! Agente Thompson nos encontrou! Ele é do governo, e está atrás de nós, pois o que estamos fazendo é ilegal! Ganhe dele na luta para que possamos continuar. (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
+        time.sleep(0.2)
+        print("Vida de {0}: {1}".format(usuario,vida_usuario))
+        time.sleep(0.2)
+        print("Vida do Agente: {0}".format(vida_agente))
+        while vida_agente>0 and vida_usuario>0:
+            a=random.randint(1,20)
+            print("Sua vez de atacar! Opções: tapa intergaláctico, combo de socos, banho de ácido.")
+            ataque=input("Ataque escolhido: ")
+            while ataque!="tapa intergaláctico" and ataque!="combo de socos" and ataque!="banho de ácido" and ataque!="arma intergaláctica":
+                ataque=input("Ihhhh, não foi dessa vez. Tente outro ataque: ")
+            if ataque=="arma intergaláctica":
+                print("A-ha! Você lembrou-se da sua arma guardada em seu inventário!")
+                vida_agente-=inventario["arma intergaláctica"]
+            else:
+                if ataque=="tapa intergaláctico":
+                    vida_agente-=tapa_intergaláctico
+                    print("Vida do agente: {0}".format(vida_agente))
+                elif ataque=="combo_de_socos":
+                    vida_agente-=combo_de_socos
+                    print("Vida do agente: {0}".format(vida_agente))
+                else:
+                    vida_agente-=banho_de_ácido
+                    print("Vida do agente: {0}".format(vida_agente))
+                if 1<=a<=10 and vida_agente>0:
+                    vida_usuario-=soco_agente
+                    print()
+                    time.sleep(0.2)
+                    print("O oponente utilizou 'Soco agente'!")
+                    time.sleep(0.2)
+                    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+                elif 11<=a<18 and vida_agente>0:
+                    vida_usuario-=chute_agente
+                    print()
+                    time.sleep(0.2)
+                    print("O oponente utilizou 'Chute agente'!")
+                    time.sleep(0.2)
+                    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+                elif 18<=a<=20 and vida_agente>0:
+                    vida_usuario-=peteleco_agente
+                    print()
+                    time.sleep(0.2)
+                    print("O oponente utilizou o seu ataque especial! O peteleco agente!!")
+                    time.sleep(0.2)
+                    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+        if vida_usuario<=0:
+            return("Você morreu!")
+            game_over==True
+        else:
+            inventario["troféu da realidade 3"]="Frasco de Magnésio"
+            return("Agente derrotado! Agora, como recompensa, um frasco de magnésio que irá ajudar na constituição da arma foi adicionada ao seu inventário.")
+    
+    def carregar_realidade2(escolha2):
+        print()
+        time.sleep(0.2)
+        resolucao=input("Charada: a todas sas coisas e homens eu pertenço, mas ainda sou evitado com desdenho. Acaricie e cuide de mim até enlouquecer, mas nenhum golpe no fim pode me deter. Comigo crianças se deleitam, anciões me rejeitam e belas damas contemplam. Chore, e chorarei; boceje, e dormirei; sorria, e também sorrirei. Quem sou eu?  ")
+        tentativas=10
+        while tentativas>0 and resolucao!="reflexo":
+            time.sleep(0.2)
+            resolucao=input("Errado! Restam {0} tentativas! ".format(tentativas))
+            tentativas-=1
+        if tentativas>0:
+            print()
+            time.sleep(0.2)
+            inventario["troféu da realidade 2"]="The Bowl"
+            return ("Você decifrou a charada! Agora, o 'The Bowl', item que atua como transmissor de energia da arma, foi adicionado ao seu inventário.")
+        else:
+            print()
+            return ("Fracassou! Você e Rick caem em no calabouço do rei onde estão destinados a permanecer até o fim de suas vidas!")
+            game_over==True
+            
+    def carregar_realidade1(escolha2):
+        vida_usuario=220
+        vida_selvagem=180
+        laser_blaster=20
+        conjunto_com_rick=80
+        espada_do_julgamento=50
+        soco_selvagem=60
+        chute_selvagem=50
+        combo_selvagem=100
+        print()
+        time.sleep(0.2)
+        print("Oh não! Um selvagem super forte surgiu no seu caminho! (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
+        time.sleep(0.2)
+        print("Vida de {0}: {1}".format(usuario,vida_usuario))
+        time.sleep(0.2)
+        print("Vida de Selvagem: {0}".format(vida_selvagem))
+        while vida_selvagem>0 and vida_usuario>0:
+            a=random.randint(1,20)
+            time.sleep(0.2)
+            print("Sua vez de atacar! Opções: laser blaster, ataque em conjunto com rick, espada do julgamento")
+            ataque=input("Ataque escolhido: ")
+            while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento" and ataque!="arma intergaláctica":
+                ataque=input("Ihhhh, não foi dessa vez. Tente outro ataque: ")
+            if ataque=="arma intergaláctica":
+                print("A-ha! Você lembrou-se da sua arma guardada em seu inventário!")
+                vida_selvagem-=inventario["arma intergaláctica"]
+            else:
+                if ataque=="laser blaster":
+                    vida_selvagem-=laser_blaster
+                    time.sleep(0.9)
+                    print("Vida do selvagem: {0}".format(vida_selvagem))
+                elif ataque=="ataque em conjunto com rick":
+                    vida_selvagem-=conjunto_com_rick
+                    time.sleep(0.9)
+                    print("Vida do selvagem: {0}".format(vida_selvagem))
+                else:
+                    vida_selvagem-=espada_do_julgamento
+                    time.sleep(0.9)
+                    print("Vida do selvagem: {0}".format(vida_selvagem))
+                if 1<=a<=10 and vida_selvagem>0:
+                    vida_usuario-=chute_selvagem
+                    print()
+                    time.sleep(0.2)
+                    print("O oponente utilizou 'chute selvagem'!")
+                    time.sleep(0.2)
+                    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+                elif 11<=a<18 and vida_selvagem>0:
+                    vida_usuario-=soco_selvagem
+                    print()
+                    time.sleep(0.2)
+                    print("O oponente utilizou 'soco selvagem'!")
+                    time.sleep(0.2)
+                    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+                elif 18<=a<=20 and vida_selvagem>0:
+                    vida_usuario-=combo_selvagem
+                    print()
+                    time.sleep(0.2)
+                    print("O oponente utilizou o seu ataque especial!")
+                    time.sleep(0.2)
+                    print("Vida de {0}: {1}".format(usuario,vida_usuario))
+        if vida_usuario<=0:
+            return("Você morreu!")
+            game_over==True
+        else:
+            inventario["troféu da realidade 1"]="Pedra de Urânio"
+            return("Selvagem derrotado! Agora, como recompensa, uma pedra de urânio que irá servir como fonte da arma foi adicionada ao seu inventário.")
+            
+    def carregar_realidades(escolha2):
+        print()
+        info=''
+        realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para ser destrancado".format(usuario)},"realidade 3":{"titulo":"Caverna Obscura","descricao":"Rick e {0} viajam para uma caverna muito escura iluminada por um só feixe de luz que aponta para um altar sagrado. Curiosos, vocês vão ver o que tem nele".format(usuario)}}
+        for e,v in realidades.items():
+            if e==escolha2:
+                for k in v.values():
+                    info+=k
+                    info+='. '
+        print (info)
+        if escolha2=="realidade 1":
+            return carregar_realidade1(escolha2)
+        elif escolha2=="realidade 2":
+            return carregar_realidade2(escolha2)
+        else:
+            return carregar_realidade3(escolha2)
+        
+       
     print()
     print()
     time.sleep(0.4)
