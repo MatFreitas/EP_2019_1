@@ -4,6 +4,7 @@
 #- Matheus Freitas Sant'Ana, matheusfs2@al.insper.edu.br
 #- Gabriel Salvator Benatar, gabriel.benatar@beityaacov.com.br
 import random
+import time
 inventario={}
 usuario=input("Para começar a jogar digite seu nome: ")
 
@@ -16,9 +17,14 @@ def carregar_realidade3(escolha2):
     soco_agente=60
     chute_agente=50
     peteleco_agente=100
+    
+    
     print()
+    time.sleep(0.2)
     print("Rick: Socorro! Agente Thompson nos encontrou! Ele é do governo, e está atrás de nós, pois o que estamos fazendo é ilegal! Ganhe dele na luta para que possamos continuar. (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
+    time.sleep(0.2)
     print("Vida de {0}: {1}".format(usuario,vida_usuario))
+    time.sleep(0.2)
     print("Vida do Agente: {0}".format(vida_agente))
     while vida_agente>0 and vida_usuario>0:
         a=random.randint(1,20)
@@ -42,17 +48,23 @@ def carregar_realidade3(escolha2):
             if 1<=a<=10 and vida_agente>0:
                 vida_usuario-=soco_agente
                 print()
+                time.sleep(0.2)
                 print("O oponente utilizou 'Soco agente'!")
+                time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
             elif 11<=a<18 and vida_agente>0:
                 vida_usuario-=chute_agente
                 print()
+                time.sleep(0.2)
                 print("O oponente utilizou 'Chute agente'!")
+                time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
             elif 18<=a<=20 and vida_agente>0:
                 vida_usuario-=peteleco_agente
                 print()
+                time.sleep(0.2)
                 print("O oponente utilizou o seu ataque especial! O peteleco agente!!")
+                time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
     if vida_usuario<=0:
         return("Você morreu!")
@@ -85,11 +97,15 @@ def carregar_realidade1(escolha2):
     chute_selvagem=50
     combo_selvagem=100
     print()
+    time.sleep(0.2)
     print("Oh não! Um selvagem super forte surgiu no seu caminho! (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
+    time.sleep(0.2)
     print("Vida de {0}: {1}".format(usuario,vida_usuario))
+    time.sleep(0.2)
     print("Vida de Selvagem: {0}".format(vida_selvagem))
     while vida_selvagem>0 and vida_usuario>0:
         a=random.randint(1,20)
+        time.sleep(0.2)
         print("Sua vez de atacar! Opções: laser blaster, ataque em conjunto com rick, espada do julgamento")
         ataque=input("Ataque escolhido: ")
         while ataque!="laser blaster" and ataque!="ataque em conjunto com rick" and ataque!="espada do julgamento" and ataque!="arma intergaláctica":
@@ -100,9 +116,11 @@ def carregar_realidade1(escolha2):
         else:
             if ataque=="laser blaster":
                 vida_selvagem-=laser_blaster
+                time.sleep(0.2)
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             elif ataque=="ataque em conjunto com rick":
                 vida_selvagem-=conjunto_com_rick
+                time.sleep(0.2)
                 print("Vida do selvagem: {0}".format(vida_selvagem))
             else:
                 vida_selvagem-=espada_do_julgamento
@@ -110,17 +128,23 @@ def carregar_realidade1(escolha2):
             if 1<=a<=10 and vida_selvagem>0:
                 vida_usuario-=chute_selvagem
                 print()
+                time.sleep(0.2)
                 print("O oponente utilizou 'chute selvagem'!")
+                time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
             elif 11<=a<18 and vida_selvagem>0:
                 vida_usuario-=soco_selvagem
                 print()
+                time.sleep(0.2)
                 print("O oponente utilizou 'soco selvagem'!")
+                time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
             elif 18<=a<=20 and vida_selvagem>0:
                 vida_usuario-=combo_selvagem
                 print()
+                time.sleep(0.2)
                 print("O oponente utilizou o seu ataque especial!")
+                time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
     if vida_usuario<=0:
         return("Você morreu!")
@@ -147,10 +171,14 @@ def carregar_realidades(escolha2):
     
 print()
 print()
+time.sleep(0.2)
 print("Sala 405- Aula de Design de Software")
+time.sleep(0.2)
 print('-'*37)
+time.sleep(0.2)
 print('É Quarta-Feira à tarde, você está no Insper na Aula de Design de Software e decide ir ao banheiro, pois precisa de um lugar sossegado para pensar em uma maneira de como adiar o EP, já que você nem começou a fazer. De repente seu avô Rick que estava desaparecido há anos surge e te convida para uma aventura diferenciada, sobre realidades alternativas, mudar o futuro, etc. Você não entende muito bem o que ele quer dizer, mas vê isso como uma possibilidade de adiar o EP.')
 print()
+time.sleep(0.2)
 print("Rick: Rápido! Preciso de sua ajuda, a Teriathlon Plasmium 26 quebrou! Se você me ajudar, te retribuo com um favor!")
 escolha1=input("aceitar ou recusar? ")
 if escolha1!="aceitar" and escolha1!="recusar":
@@ -159,9 +187,11 @@ if escolha1!="aceitar" and escolha1!="recusar":
         escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida): ")       
 if escolha1=="aceitar":
     print()
+    time.sleep(0.2)
     print("Rick: Obrigado por aceitar! Agora vou te explicar o que precisa ser feito para consertar minha arma. Para isso será necessário visitar 3 realidades diferentes, em cada uma você encontrará um componete para a contrução da arma. Os componentes necessários para a contrução são: uma pedra de urânio, um frasco de magnésio e o 'Bowl'") 
 else:
     print()
+    time.sleep(0.2)
     print("Rick insiste que você deve ajudá-lo  dizendo que se for com ele, além de te ajudar com a data, também te ajudará a tirar um 10 no EP.")
     escolha1=input("aceitar ou recusar? ")
     if escolha1!="aceitar" and escolha1!="recusar":
@@ -170,9 +200,11 @@ else:
             escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida: )") 
     if escolha1=="aceitar":
         print()
+        time.sleep(0.2)
         print("Que a aventura começe! Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.")
     else:
         print()
+        time.sleep(0.2)
         print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
         inventario["arma intergaláctica"]=1000
 print()
