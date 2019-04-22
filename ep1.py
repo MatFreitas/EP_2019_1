@@ -23,7 +23,9 @@ def carregar_realidade3(escolha2):
     
     print()
     time.sleep(0.2)
-    print("Rick: Socorro! Agente Thompson nos encontrou! Ele é do governo, e está atrás de nós, pois o que estamos fazendo é ilegal! Ganhe dele na luta para que possamos continuar. (Dica: atente-se para a vida do oponente para verificar a eficiência de seus ataques!)")
+    fight_or_run=input("Rick: Socorro! Agente Thompson nos encontrou! Ele é do governo, e está atrás de nós, pois o que estamos fazendo é ilegal! Ganhe dele na luta para que possamos continuar!' Agora, você pode decidir entre fugir ou lutar com o Agente Thompson." )
+    if fight_or_run=="fugir":
+    else:
     time.sleep(0.2)
     print("Vida de {0}: {1}".format(usuario,vida_usuario))
     time.sleep(0.2)
@@ -69,7 +71,7 @@ def carregar_realidade3(escolha2):
                 time.sleep(0.2)
                 print("Vida de {0}: {1}".format(usuario,vida_usuario))
     if vida_usuario<=0:
-        return("Você morreu!")
+        return("Você morreu!"),
         
     else:
         return("Agente derrotado! Agora, você está livre para ir até o baú.")
@@ -163,7 +165,7 @@ def carregar_realidade1(escolha2):
 def carregar_realidades(escolha2):
     print()
     info=''
-    realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para ser destrancado".format(usuario)},"realidade 3":{"titulo":"Caverna Obscura","descricao":"Rick e {0} viajam para uma caverna muito escura iluminada por um só feixe de luz que aponta para um altar sagrado. Curiosos, vocês vão ver o que tem nele".format(usuario)}}
+    realidades={"realidade 1": {"titulo":"Planeta Armaggedon","descricao":"Rick e {0} viajam para um mundo pós-apocalíptico, onde precisarão usar suas habilidades para lutar contra os selvagens nativos".format(usuario)},"realidade 2":{"titulo":"Castelo Medieval","descricao":"Rick e {0} viajam para um forte antigo em ruínas e o item necessário para sua jornada está do outro lado de uma ponte. O único obstáculo que os impede de obtê-lo é um portão que exige a resolução de uma charada para ser destrancado".format(usuario)},"realidade 3":{"titulo":"Cidade Abandonada","descricao":"Rick e {0} viajam para uma metrópole que aparenta ter sido próspera há muito; porém, em seu estado atual, está cercada de areia".format(usuario)}}
     for e,v in realidades.items():
         if e==escolha2:
             for k in v.values():
@@ -214,17 +216,9 @@ else:
     else:
         print()
         time.sleep(0.2)
-<<<<<<< HEAD
-<<<<<<< HEAD
         print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
         inventario["arma intergaláctica"]=1000
 print()
-time.sleep(0.2)
-=======
-        print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
-        inventario["arma intergaláctica"]=1000
-print()
->>>>>>> c2ffb697e9b031af0ab0d88d3ecaf168175d7f43
 escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
 if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
@@ -240,42 +234,6 @@ if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
 print(carregar_realidades(escolha2))
-<<<<<<< HEAD
-=======
-        print("Rick insiste que você deve ajudá-lo  dizendo que se for com ele, além de te ajudar com a data, também te ajudará a tirar um 10 no EP.")
-        escolha1=input("aceitar ou recusar? ")
-        if escolha1!="aceitar" and escolha1!="recusar":
-            while escolha1!="aceitar" and escolha1!="recusar":
-                print()
-                escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida: )") 
-        if escolha1=="aceitar":
-            print()
-            time.sleep(0.2)
-            print("Que a aventura começe! Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.")
-        else:
-            print()
-            time.sleep(0.2)
-            print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
-            inventario["arma intergaláctica"]=1000
-    print()
-    escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
-    if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-        while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-            escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-    print(carregar_realidades(escolha2))
-    escolha2=input("De volta a garagem, Rick te diz que ainda há muito trabalho a ser feito e pede para você digitar a realidade a que deseja ir: ")
-    if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-        while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-            escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-    print(carregar_realidades(escolha2))
-    escolha2=input("De volta a garagem, Rick te diz que a aventura está quase acabando e pede para você digitar a realidade a que deseja ir: ")
-    if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-        while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
-            escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
-    print(carregar_realidades(escolha2))
->>>>>>> 2edc358b8c9b8befca9e5ebd52ce9dad5ac85723
-=======
->>>>>>> c2ffb697e9b031af0ab0d88d3ecaf168175d7f43
 
 
 
