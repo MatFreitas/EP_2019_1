@@ -101,7 +101,7 @@ if escolha1!="aceitar" and escolha1!="recusar":
         escolha1=input("Rick: 'Fala que nem gente!' (digite uma resposta válida): ")       
 if escolha1=="aceitar":
     print()
-    print("Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.")
+    print("Rick: Obrigado por aceitar! Agora vou te explicar o que precisa ser feito para consertar minha arma. Para isso será necessário visitar 3 realidades diferentes, em cada uma você encontrará um componete para a contrução da arma. Os componentes necessários para a contrução são: uma pedra de urânio, um frasco de magnésio e o 'Bowl'") 
 else:
     print()
     print("Rick insiste que você deve ajudá-lo  dizendo que se for com ele, além de te ajudar com a data, também te ajudará a tirar um 10 no EP.")
