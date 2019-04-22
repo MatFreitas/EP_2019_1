@@ -72,8 +72,7 @@ while not game_over:
             return("Você morreu!")
             game_over==True
         else:
-            inventario["troféu da realidade 3"]="Frasco de Magnésio"
-            return("Agente derrotado! Agora, como recompensa, um frasco de magnésio que irá ajudar na constituição da arma foi adicionada ao seu inventário.")
+            return("Agente derrotado! Agora, você está livre para ir até o baú.")
     
     def carregar_realidade2(escolha2):
         print()
