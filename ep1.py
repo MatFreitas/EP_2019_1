@@ -212,6 +212,7 @@ else:
         print("Easter egg descoberto! {0} é teletransportado para a garagem de seu avô e uma arma intergaláctica é adicionada ao seu inventário para ser usada no futuro. Rick começa a te explicar que precisa consertar sua arma. Para isso, é necessário que vocês visitem 3 realidades diferentes para conseguir os componentes que constituem sua arma: o 'Bowl', uma pedra de urânio e um frasco de magnésio.".format(usuario))
         inventario["arma intergaláctica"]=1000
 print()
+time.sleep(0.2)
 escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3): ")
 if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
