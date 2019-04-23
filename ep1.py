@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 22 11:04:56 2019
+@author: gabrielsalvatorbenatar
+"""
 # EP 2019-1: Escape Insper
 #
 # Alunos: 
@@ -27,8 +33,43 @@ def carregar_realidade3(escolha2):
     if fight_or_run!="fugir" and fight_or_run!="lutar":
         while fight_or_run!="fugir" and fight_or_run!="lutar":
             fight_or_run=input("Rick: 'Não ouvi. Fala de novo!' (Digite uma resposta inválida):  ")
-    if fight_or_run=="fugir":
-        a=1
+    if fight_or_run=="fugir":       
+        print('Você escolheu fugir, digite aonde quer ir.(Frase no parenteses)')
+        print()
+        print('Você está fugindo e têm duas opções: Beco escuro a sua esquerda(beco) ou Pular portão a sua direita (pular).')
+        escolha=input('Para onde você quer ir? ')
+        if escolha!="beco" and escolha!="pular":
+            while escolha!="beco" and escolha!="pular":
+                escolha=input("Operação Inválida, digite novamente: ")
+        if escolha=='beco':
+            return 'Você estava correndo, escorregou em uma poça ácida e morreu.'
+        else:
+            print ('Você pulou o portão e se depara novamente com duas opções: Entrar em uma porta misteriosa (porta), ou se esconder em um arbusto (arbusto)')
+            escolha=input('Para onde você quer ir? ')
+            if escolha!="porta" and escolha!="arbusto":
+                while escolha!="porta" and escolha!="arbusto":
+                    escolha=input("Operação Inválida, digite novamente: ")
+            if escolha == 'arbusto':
+                return 'Os arbustos eram venenosos! MORREU!'
+            else:
+                print ('Você entrou em uma sala escura após passar pela porta, mas o agente continua te seguindo. Você tem dua opções: seguir em linha reta até a luz no final do corredor (luz), ou pular da janela (janela)')
+                escolha=input('Para onde você quer ir? ')
+                if escolha!="luz" and escolha!="janela":
+                    while escolha!="luz" and escolha!="janela":
+                        escolha=input("Operação Inválida, digite novamente: ")
+                if escolha == 'luz':
+                    return 'O prédio em que você estava desabou! MORREU!'
+                else:
+                    print('O predio desabou, mas você conseguiu fugir a tempo, está quase lá, mas Thompson ainda está atrás de você. Novamente se depara com duas opções: Roubar um carrinho de golf (carrinho), ou pular em um bueiro e fugir pelo esgoto (esgoto)')
+                    escolha=input('Para onde você quer ir? ')
+                    if escolha!="carrinho" and escolha!="esgoto":
+                        while escolha!="carrinho" and escolha!="esgoto":
+                            escolha=input("Operação Inválida, digite novamente: ")
+                    if escolha == 'carrinho':
+                        return 'Ao girar a chave, o carrinho entrou em curto circuito e explodiu!!! MORREU!'
+                    else:
+                        inventario["troféu da realidade 3"]="Frasco de Magnésio"
+                        return 'Easter egg descoberto! No caminho do esgoto você encontrou o Frasco de Magnésio que estava procurando, PARABENS!'
     else:
         time.sleep(0.9)
         print("Vida de {0}: {1}".format(usuario,vida_usuario))
@@ -273,7 +314,7 @@ for r in inventario.values():
 if lista==[1000,"Frasco de Magnésio","Pedra de Urânio","The Bowl"] or lista==[1000,"Frasco de Magnésio","The Bowl","Pedra de Urânio"] or lista==[1000,"The Bowl","Frasco de Magnésio","Pedra de Urânio"] or lista==[1000,"The Bowl","Pedra de Urânio","Frasco de Magnésio"] or lista==[1000,"Pedra de Urânio","Frasco de Magnésio","The Bowl"] or lista==[1000,"Pedra de Urânio","The Bowl","Frasco de Magnésio"] or lista==["Frasco de Magnésio","Pedra de Urânio","The Bowl"] or lista==["Frasco de Magnésio","The Bowl","Pedra de Urânio"] or lista==["The Bowl","Frasco de Magnésio","Pedra de Urânio"] or lista==["The Bowl","Pedra de Urânio","Frasco de Magnésio"] or lista==["Pedra de Urânio","Frasco de Magnésio","The Bowl"] or lista==["Pedra de Urânio","The Bowl","Frasco de Magnésio"]:    
     print("Todos os componentes adquiridos e a Teriathlon Plasmium 26 foi construída! Você zerou o jogo! Yeah!")
 else:
-    print("Achava que ia conseguir construir a arma repetindo realidades? Você perdeu!!!")
+    print("Achava que ia conseguir manipular o jogo? Você perdeu!!! (Possiveis motivos: morte em uma das realidades ou foi a uma realidade mais de uma vez.)")
 
 
 
