@@ -135,7 +135,7 @@ def carregar_realidade3(escolha2):
                 time.sleep(0.9)
                 return("Parabéns, você descobriu a senha, agora, como recompensa, um frasco de magnésio que irá ajudar na constituição da arma foi adicionada ao seu inventário.")
             else:
-                return("Você morreu! O baú explodiu!")
+                return("Você morreu! O baú explodiu!!!")
         
 
 def carregar_realidade2(escolha2):
