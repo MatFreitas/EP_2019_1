@@ -240,6 +240,9 @@ else:
         inventario["arma intergaláctica"]=1000
 print()
 escolha2=input("Agora, Rick pede para você segui-lo até a câmara quântica de teleporte que está no porão da garagem. Para usá-la, basta digitar o lugar a que deseja ir (suas opções são realidade 1, realidade 2 ou realidade 3)(Obs.: a câmara de teleporte possui carga para apenas TRÊS VIAGENS!): ")
+print()
+time.sleep(0.9)
+print("Rick: Ah e, {0}, não se preocupe. Caso morrermos fora da terra, voltaremos automaticamente para nossa garagem".format(usuario))
 if escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
     while escolha2!="realidade 1" and escolha2!="realidade 2" and escolha2!="realidade 3":
         escolha2=input("Uma mensagem aparece dizendo 'Não Disponível. Tente novamente: ")
